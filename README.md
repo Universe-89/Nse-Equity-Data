@@ -1,0 +1,1 @@
+# Nse-Equity-Data
