@@ -51,7 +51,6 @@ def zipextractor():
         print("extractibh")
         zip.extractall()
 def datauploader(csvfile):
-    print('1')
     add =  os.path.join(BASE_DIR, csvfile)
     file = open(add)
     csv_reader = csv.reader(file, delimiter=',')
@@ -71,11 +70,7 @@ def datauploader(csvfile):
         newbhav.close = row[7]
         newbhav.save()
         i+=1
-    print("done")
     file.close()
-'''    if cache.get('file'):
-        oldfile = cache.get('file')
-        os.remove(oldfile)'''
 
             
 

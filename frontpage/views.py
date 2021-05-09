@@ -11,7 +11,6 @@ CACHE_TTL = getattr(settings ,'CACHE_TTL' , 60*60*24)
 
 def query(name = None):
     if name:
-        print("DATA COMING FROM DB")
         recipes = bhav.objects.filter(name__contains = name)
     else:
         recipes = bhav.objects.all()
@@ -22,13 +21,9 @@ def search(response):
         name = "FULLRESULT"
     if name:
         name = name.upper()
-    if cache.get(name) : 
-        print("From CACHE")
-        print("####################")   
+    if cache.get(name) :  
         result = cache.get(name)
     else :
-        print("FROM DB")
-        print("####################")
         if name=='FULLRESULT':
             result = query(None)
         else:
