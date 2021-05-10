@@ -27,6 +27,6 @@ By clicking the download button all the information shown is downloaded in CSV f
 
 ![Search](https://github.com/tanmayks1999/Nse-Equity-Data/blob/main/Screenshots/download.png?raw=true)
 
-### Data shown in cs
+### Data shown in csv
 
 ![Search](https://github.com/tanmayks1999/Nse-Equity-Data/blob/main/Screenshots/csv.png?raw=true)
