@@ -29,7 +29,8 @@ def search(response):
         else:
             result = query(name)
         cache.set(name,result)
-
+    if(name == 'FULLRESULT'):
+        name = "Enter Equity Name"
     context = {'result' : result , 'equity' : name}
     return render(response,"frontpage/home.html",context)
 

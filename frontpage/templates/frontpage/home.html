@@ -15,9 +15,18 @@
         margin: 3em;
         background-color:#212529;
     }
+    .head {
+        position: absolute;
+        right : 3em;
+        top : 3px;
+        margin-bottom: 1em;
+        color :grey;
+        font-size: small;
+    }
 </style>
 
 <body class="body">
+    <div class = "head">This data is daily updated at 6 PM IST</div>
     <form name="form" method="POST" action="#">
         {% csrf_token %}
         <div class="input-group mb-3">
