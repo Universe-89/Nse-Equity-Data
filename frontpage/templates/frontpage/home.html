@@ -21,7 +21,7 @@
     <form name="form" method="POST" action="#">
         {% csrf_token %}
         <div class="input-group mb-3">
-            <input type="input" class="form-control"placeholder="Enter Equity Name" style = "background-color:#212529 ; color : whitesmoke; font-weight: 900;text-transform: uppercase;letter-spacing: 1px;" aria-label="Enter Equity Name"
+            <input type="input" class="form-control"placeholder="{{ equity }}" style = "background-color:#212529 ; color : whitesmoke; font-weight: 900;text-transform: uppercase;letter-spacing: 1px;" aria-label="Enter Equity Name"
                 aria-describedby="basic-addon2" id="name" name="name">
             <div class="input-group-append">
                 <button class="btn btn-outline-primary" type="submit" type="button">Search</button>
