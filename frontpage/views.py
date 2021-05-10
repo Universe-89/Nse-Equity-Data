@@ -8,16 +8,9 @@ from django.core.cache import cache
 
 # Create your views here
 CACHE_TTL = getattr(settings ,'CACHE_TTL' , 60*60*24)
-
-def query(name = None):
-    if name:
-        recipes = bhav.objects.filter(name__contains = name)
-    else:
-        recipes = bhav.objects.all()
-    return recipes
 def search(response):
     name = response.POST.get("name")
-    if(name == None) :
+    if(name == None or name == "") :
         name = "FULLRESULT"
     if name:
         name = name.upper()
@@ -33,5 +26,12 @@ def search(response):
         name = "Enter Equity Name"
     context = {'result' : result , 'equity' : name}
     return render(response,"frontpage/home.html",context)
+def query(name = None):
+    if name:
+        equity = bhav.objects.filter(name__contains = name)
+    else:
+        equity = bhav.objects.all()
+    return  equit
+
 
 

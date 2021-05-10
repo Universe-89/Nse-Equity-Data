@@ -3,9 +3,9 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 #@sched.scheduled_job('cron', day_of_week='mon-fri', hour=21)
 from datetime import datetime
 import os
-
-from apscheduler.schedulers.background import BackgroundScheduler
 from updater import update
+from apscheduler.schedulers.background import BackgroundScheduler
+
 
 
 def start():
