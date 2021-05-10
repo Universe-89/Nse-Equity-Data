@@ -31,7 +31,7 @@ def query(name = None):
         equity = bhav.objects.filter(name__contains = name)
     else:
         equity = bhav.objects.all()
-    return  equit
+    return  equity
 
 
 
